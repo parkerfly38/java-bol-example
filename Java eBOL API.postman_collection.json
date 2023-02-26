@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "733d61b0-b6c2-4cb3-8635-d0600c55e2b3",
+		"name": "Java eBOL API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "269080"
+	},
+	"item": [
+		{
+			"name": "Post BOL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"bol\": {\n    \"date\": \"2021-05-20T00:00:00.000\",\n    \"function\": \"Create\",\n    \"isTest\": true,\n    \"requestorRole\": \"Third Party\",\n    \"specialInstructions\": \"Gate code 123 to enter complex\"\n  },\n  \"images\": {\n    \"includeBol\": true,\n    \"includeShippingLabels\": true,\n    \"shippingLabels\": {\n      \"format\": \"Avery\",\n      \"quantity\": 5,\n      \"position\": 2\n    }\n  },\n  \"referenceNumbers\": {\n    \"pro\": \"123456-7\",\n    \"estimate\": \"E556724\",\n    \"shipmentId\": \"SID9743985\",\n    \"masterBol\": \"MBL98472587\",\n    \"bol\": [\n      \"BL19498432\",\n      \"BL99744565\"\n    ],\n    \"po\": [\n      {\n        \"number\": \"554238\",\n        \"pieces\": 5,\n        \"weight\": 150,\n        \"palletized\": true,\n        \"additionalShipperInfo\": \"Freight must always stay upright\"\n      }\n    ],\n    \"additionalReferences\": [\n      {\n        \"name\": \"Customer Reference Id\",\n        \"value\": \"CRID3452-01\"\n      }\n    ]\n  },\n  \"payment\": {\n    \"terms\": \"Prepaid\"\n  },\n  \"commodities\": {\n    \"handlingUnits\": [\n      {\n        \"id\": \"unit1\",\n        \"count\": 2,\n        \"type\": \"SKD\",\n        \"tareWeight\": 5,\n        \"weight\": 1500,\n        \"length\": 48,\n        \"width\": 48,\n        \"height\": 48,\n        \"stackable\": false\n      }\n    ],\n    \"lineItems\": [\n      {\n        \"handlingUnitId\": \"unit1\",\n        \"description\": \"Small frameless mirrors\",\n        \"weight\": 1500,\n        \"pieces\": 3,\n        \"packagingType\": \"BOX\",\n        \"classification\": \"55\",\n        \"nmfc\": \"86900\",\n        \"nmfcSub\": \"3\",\n        \"hazardous\": true,\n        \"hazardousDetails\": {\n          \"weight\": 45,\n          \"class\": \"3\",\n          \"unnaNumber\": \"1005\",\n          \"propername\": \"Anhydrous ammonia\",\n          \"technicalName\": \"NH3\",\n          \"packingGroup\": \"2\",\n          \"contractNumber\": \"54321\"\n        }\n      }\n    ]\n  },\n  \"shipmentTotals\": {\n    \"grossWeight\": 2000,\n    \"netWeight\": 1993,\n    \"handlingUnits\": 2,\n    \"linearLength\": 96,\n    \"cubicFeet\": 7\n  },\n  \"accessorials\": {\n    \"codes\": [\n      \"IDL\",\n      \"LFTP\"\n    ],\n    \"hazardousDetails\": {\n      \"emergencyContact\": {\n        \"name\": \"Manny Delgato\",\n        \"phone\": \"7775558899\"\n      }\n    },\n    \"cod\": {\n      \"amount\": \"56.71\",\n      \"terms\": \"Collect\",\n      \"customerCheckAcceptable\": true,\n      \"remitTo\": {\n        \"name\": \"Dog Beds by Stella\",\n        \"address1\": \"121 S. Cliffwood Ave.\",\n        \"address2\": \"Suite 55\",\n        \"city\": \"Los Angeles\",\n        \"stateProvince\": \"CA\",\n        \"postalCode\": \"90001\",\n        \"country\": \"USA\"\n      }\n    },\n    \"sortAndSegregateDetails\": {\n      \"pieces\": 25\n    },\n    \"excessLiabilityDetails\": {\n      \"monetaryValue\": \"100.00\",\n      \"excessDeclaredValue\": \"500.00\"\n    },\n    \"markDetails\": {\n      \"pieces\": 25\n    },\n    \"limitedAccessType\": {\n      \"origin\": \"Church\",\n      \"destination\": \"Secure\"\n    },\n    \"timeCriticalDetails\": {\n      \"type\": \"Delivery Window\",\n      \"date\": {\n        \"start\": \"2021-05-20T00:00:00.000\",\n        \"end\": \"2021-05-22T00:00:00.000\"\n      }\n    },\n    \"appointmentDetails\": {\n      \"pickup\": {\n        \"start\": \"2021-05-20T00:00:00.000\",\n        \"end\": \"2021-05-22T00:00:00.000\"\n      },\n      \"delivery\": {\n        \"start\": \"2021-05-20T00:00:00.000\",\n        \"end\": \"2021-05-22T00:00:00.000\"\n      }\n    }\n  },\n  \"origin\": {\n    \"account\": \"12345\",\n    \"locationId\": \"808\",\n    \"name\": \"Closets Closets Closets\",\n    \"address1\": \"12 S. Closets Place\",\n    \"address2\": \"ste 3\",\n    \"city\": \"Los Angeles\",\n    \"stateProvince\": \"CA\",\n    \"postalCode\": \"90001\",\n    \"country\": \"USA\",\n    \"contact\": {\n      \"phone\": \"5552226666\",\n      \"phoneExt\": \"99\",\n      \"name\": \"Jay Pritchett\",\n      \"email\": \"jpritchett@closets.com\"\n    }\n  },\n  \"destination\": {\n    \"account\": \"12345\",\n    \"locationId\": \"808\",\n    \"name\": \"Closets Closets Closets\",\n    \"address1\": \"12 S. Closets Place\",\n    \"address2\": \"ste 3\",\n    \"city\": \"Los Angeles\",\n    \"stateProvince\": \"CA\",\n    \"postalCode\": \"90001\",\n    \"country\": \"USA\",\n    \"contact\": {\n      \"phone\": \"5552226666\",\n      \"phoneExt\": \"99\",\n      \"name\": \"Jay Pritchett\",\n      \"email\": \"jpritchett@closets.com\"\n    }\n  },\n  \"billTo\": {\n    \"account\": \"12345\",\n    \"locationId\": \"808\",\n    \"name\": \"Closets Closets Closets\",\n    \"address1\": \"12 S. Closets Place\",\n    \"address2\": \"ste 3\",\n    \"city\": \"Los Angeles\",\n    \"stateProvince\": \"CA\",\n    \"postalCode\": \"90001\",\n    \"country\": \"USA\",\n    \"contact\": {\n      \"phone\": \"5552226666\",\n      \"phoneExt\": \"99\",\n      \"name\": \"Jay Pritchett\",\n      \"email\": \"jpritchett@closets.com\"\n    }\n  },\n  \"customsBroker\": {\n    \"name\": \"Closets Closets Closets\",\n    \"address1\": \"12 S. Closets Place\",\n    \"address2\": \"ste 3\",\n    \"city\": \"Los Angeles\",\n    \"stateProvince\": \"CA\",\n    \"postalCode\": \"90001\",\n    \"country\": \"USA\",\n    \"contact\": {\n      \"phone\": \"5552226666\",\n      \"phoneExt\": \"99\",\n      \"name\": \"Jay Pritchett\",\n      \"email\": \"jpritchett@closets.com\"\n    }\n  }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/bol",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bol"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get One BOL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/bol/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bol",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All BOLs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/bol",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bol"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put BOL",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"bol\": {\n    \"date\": \"2021-05-20T00:00:00.000\",\n    \"function\": \"Update\",\n    \"isTest\": true,\n    \"requestorRole\": \"Third Party\",\n    \"specialInstructions\": \"Gate code 123 to enter complex\"\n  },\n  \"images\": {\n    \"includeBol\": true,\n    \"includeShippingLabels\": true,\n    \"shippingLabels\": {\n      \"format\": \"Avery\",\n      \"quantity\": 5,\n      \"position\": 2\n    }\n  },\n  \"referenceNumbers\": {\n    \"pro\": \"123456-7\",\n    \"estimate\": \"E556724\",\n    \"shipmentId\": \"SID9743985\",\n    \"masterBol\": \"MBL98472587\",\n    \"bol\": [\n      \"BL19498432\",\n      \"BL99744565\"\n    ],\n    \"po\": [\n      {\n        \"number\": \"554238\",\n        \"pieces\": 5,\n        \"weight\": 150,\n        \"palletized\": true,\n        \"additionalShipperInfo\": \"Freight must always stay upright\"\n      }\n    ],\n    \"additionalReferences\": [\n      {\n        \"name\": \"Customer Reference Id\",\n        \"value\": \"CRID3452-01\"\n      }\n    ]\n  },\n  \"payment\": {\n    \"terms\": \"Prepaid\"\n  },\n  \"commodities\": {\n    \"handlingUnits\": [\n      {\n        \"id\": \"unit1\",\n        \"count\": 2,\n        \"type\": \"SKD\",\n        \"tareWeight\": 5,\n        \"weight\": 1500,\n        \"length\": 48,\n        \"width\": 48,\n        \"height\": 48,\n        \"stackable\": false\n      }\n    ],\n    \"lineItems\": [\n      {\n        \"handlingUnitId\": \"unit1\",\n        \"description\": \"Small frameless mirrors\",\n        \"weight\": 1500,\n        \"pieces\": 3,\n        \"packagingType\": \"BOX\",\n        \"classification\": \"55\",\n        \"nmfc\": \"86900\",\n        \"nmfcSub\": \"3\",\n        \"hazardous\": true,\n        \"hazardousDetails\": {\n          \"weight\": 45,\n          \"class\": \"3\",\n          \"unnaNumber\": \"1005\",\n          \"propername\": \"Anhydrous ammonia\",\n          \"technicalName\": \"NH3\",\n          \"packingGroup\": \"2\",\n          \"contractNumber\": \"54321\"\n        }\n      }\n    ]\n  },\n  \"shipmentTotals\": {\n    \"grossWeight\": 2000,\n    \"netWeight\": 1993,\n    \"handlingUnits\": 2,\n    \"linearLength\": 96,\n    \"cubicFeet\": 7\n  },\n  \"accessorials\": {\n    \"codes\": [\n      \"IDL\",\n      \"LFTP\"\n    ],\n    \"hazardousDetails\": {\n      \"emergencyContact\": {\n        \"name\": \"Manny Delgato\",\n        \"phone\": \"7775558899\"\n      }\n    },\n    \"cod\": {\n      \"amount\": \"56.71\",\n      \"terms\": \"Collect\",\n      \"customerCheckAcceptable\": true,\n      \"remitTo\": {\n        \"name\": \"Dog Beds by Stella\",\n        \"address1\": \"121 S. Cliffwood Ave.\",\n        \"address2\": \"Suite 55\",\n        \"city\": \"Los Angeles\",\n        \"stateProvince\": \"CA\",\n        \"postalCode\": \"90001\",\n        \"country\": \"USA\"\n      }\n    },\n    \"sortAndSegregateDetails\": {\n      \"pieces\": 25\n    },\n    \"excessLiabilityDetails\": {\n      \"monetaryValue\": \"100.00\",\n      \"excessDeclaredValue\": \"500.00\"\n    },\n    \"markDetails\": {\n      \"pieces\": 25\n    },\n    \"limitedAccessType\": {\n      \"origin\": \"Church\",\n      \"destination\": \"Secure\"\n    },\n    \"timeCriticalDetails\": {\n      \"type\": \"Delivery Window\",\n      \"date\": {\n        \"start\": \"2021-05-20T00:00:00.000\",\n        \"end\": \"2021-05-22T00:00:00.000\"\n      }\n    },\n    \"appointmentDetails\": {\n      \"pickup\": {\n        \"start\": \"2021-05-20T00:00:00.000\",\n        \"end\": \"2021-05-22T00:00:00.000\"\n      },\n      \"delivery\": {\n        \"start\": \"2021-05-20T00:00:00.000\",\n        \"end\": \"2021-05-22T00:00:00.000\"\n      }\n    }\n  },\n  \"origin\": {\n    \"account\": \"12345\",\n    \"locationId\": \"808\",\n    \"name\": \"Closets Closets Closets\",\n    \"address1\": \"12 S. Closets Place\",\n    \"address2\": \"ste 3\",\n    \"city\": \"Los Angeles\",\n    \"stateProvince\": \"CA\",\n    \"postalCode\": \"90001\",\n    \"country\": \"USA\",\n    \"contact\": {\n      \"phone\": \"5552226666\",\n      \"phoneExt\": \"99\",\n      \"name\": \"Jay Pritchett\",\n      \"email\": \"jpritchett@closets.com\"\n    }\n  },\n  \"destination\": {\n    \"account\": \"12345\",\n    \"locationId\": \"808\",\n    \"name\": \"Closets Closets Closets\",\n    \"address1\": \"12 S. Closets Place\",\n    \"address2\": \"ste 3\",\n    \"city\": \"Los Angeles\",\n    \"stateProvince\": \"CA\",\n    \"postalCode\": \"90001\",\n    \"country\": \"USA\",\n    \"contact\": {\n      \"phone\": \"5552226666\",\n      \"phoneExt\": \"99\",\n      \"name\": \"Jay Pritchett\",\n      \"email\": \"jpritchett@closets.com\"\n    }\n  },\n  \"billTo\": {\n    \"account\": \"12345\",\n    \"locationId\": \"808\",\n    \"name\": \"Closets Closets Closets\",\n    \"address1\": \"12 S. Closets Place\",\n    \"address2\": \"ste 3\",\n    \"city\": \"Los Angeles\",\n    \"stateProvince\": \"CA\",\n    \"postalCode\": \"90001\",\n    \"country\": \"USA\",\n    \"contact\": {\n      \"phone\": \"5552226666\",\n      \"phoneExt\": \"99\",\n      \"name\": \"Jay Pritchett\",\n      \"email\": \"jpritchett@closets.com\"\n    }\n  },\n  \"customsBroker\": {\n    \"name\": \"Closets Closets Closets\",\n    \"address1\": \"12 S. Closets Place\",\n    \"address2\": \"ste 3\",\n    \"city\": \"Los Angeles\",\n    \"stateProvince\": \"CA\",\n    \"postalCode\": \"90001\",\n    \"country\": \"USA\",\n    \"contact\": {\n      \"phone\": \"5552226666\",\n      \"phoneExt\": \"99\",\n      \"name\": \"Jay Pritchett\",\n      \"email\": \"jpritchett@closets.com\"\n    }\n  }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/bol/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bol",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete One BOL",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/bol/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bol",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
