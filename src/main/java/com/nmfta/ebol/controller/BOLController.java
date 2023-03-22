@@ -23,8 +23,10 @@ import com.nmfta.ebol.model.BOLResponseImages;
 import com.nmfta.ebol.model.BOLResponseMessageStatus;
 import com.nmfta.ebol.model.BOLResponseMessageStatusInformation;
 import com.nmfta.ebol.model.BOLResponseReferenceNumbers;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
+@Tag(name = "BOL Services", description = "APIs for bills of lading.")
 public class BOLController {
 	private final BOLRepository repo;
 	

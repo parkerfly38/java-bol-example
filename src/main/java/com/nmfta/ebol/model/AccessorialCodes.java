@@ -13,7 +13,6 @@
 package com.nmfta.ebol.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * Valid values: * APTD - Appointment required at delivery * APTP - Appointment required at pickup * COD - Collect on delivery * EXPD - Expedited Service * GTD_AM- Guaranteed service - by Morning * GTD_NOON- Guaranteed service - by Noon   * GTD_PM- Guaranteed service - by End of Day * HAZ - Hazardous material * IDL - Inside delivery * INBD - In bond shipment * INS - Excess Liability * IPU - Inside pickup * LFTD - Lift gate required at delivery * LFTP - Lift gate required at pickup * LTDAD - Limited access delivery * LTDAP - Limited access pickup * MARK - Marked or tagged * MNC - Must notify consignee * OVR - Over dimension/excessive length * PPD - Perishables (food) * PSC - Protective from cold * PSH - Protective from heat * PSN - Poisonous material * REP - Residential pickup * RES - Residential delivery * SRT - Sort and segregate * SS - Single Shipment * TCS - Time Crititcal Service 
